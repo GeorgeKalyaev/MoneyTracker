@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MoneyTracker</string>
+    <string name="title_string">Название</string>
+    <string name="price_string">0 P</string>
 </resources>
