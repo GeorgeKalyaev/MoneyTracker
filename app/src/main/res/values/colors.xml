@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#95c9b8</color>
+    <color name="colorPrimaryDark">#30866a</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorText">#ffffff</color>
     <color name="background">#84c0c5</color>
     <color name="white">#FFFFFF</color>
     <color name="item_name_bg">#fcc31e</color>
     <color name="item_price_bg">#985305</color>
+
+
+
+
+    <color name="indicator">#ffff8e</color>
+    <color name="color_tabs">#d1e7e0</color>
 
 </resources>
