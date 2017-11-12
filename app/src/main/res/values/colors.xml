@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorText">#ffffff</color>
     <color name="background">#84c0c5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="item_name_bg">#fcc31e</color>
+    <color name="item_price_bg">#985305</color>
+
 </resources>
