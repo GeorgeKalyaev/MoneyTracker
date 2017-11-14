@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -15,38 +15,44 @@ import java.util.List;
 
 public class itemsAdapter extends RecyclerView.Adapter<itemsAdapter.itemViewHolder>    {
 
-    private List<item> items = new ArrayList<>();
+    private List<item> items = Collections.emptyList();
 
-    public itemsAdapter(){
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-        items.add(new item ("Молоко", 35 ));
-        items.add(new item ("Зубная щётка", 1500 ));
-        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
-
+             public void setItems(List<item> items) {
+           this.items = items;
+                notifyDataSetChanged();
     }
+
+//    public itemsAdapter(){
+//        List<item> items = new ArrayList<>();
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//        items.add(new item ("Молоко", 35 ));
+//        items.add(new item ("Зубная щётка", 1500 ));
+//        items.add(new item ("Сковородка с антипригарным покрытием", 55 ));
+//
+//    }
 
     @Override
     public itemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -65,6 +71,8 @@ public class itemsAdapter extends RecyclerView.Adapter<itemsAdapter.itemViewHold
         return items.size();
     }
 
+    public void SetItems(List<item> items) {
+    }
 
 
     static class itemViewHolder extends RecyclerView.ViewHolder {
@@ -82,8 +90,8 @@ public class itemsAdapter extends RecyclerView.Adapter<itemsAdapter.itemViewHold
         }
 
         void bind(item item){
-            name.setText(item.getName());
-            price.setText(String.valueOf(item.getPrice()+ " ք"));
+            name.setText(item.name);
+            price.setText(String.valueOf(item.price + " ք"));
         }
 
     }

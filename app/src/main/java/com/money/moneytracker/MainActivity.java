@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         pager.setAdapter(new MainPagerAdapter(getSupportFragmentManager(), getResources()));
         tabs.setupWithViewPager(pager);
+        getApplication();
     }
 }
 
